@@ -1,0 +1,271 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="Application Page">
+    <meta name="keywords" content="HTML5">
+    <meta name="author" content="Romi">
+    <link href="assignment_styles.css" rel="stylesheet"/>
+
+    <title>Application Page</title>
+
+</head>
+
+
+<body>
+
+    <form id="registration" method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
+
+        <div class="wrapper">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
+
+        <h2>Application <br>
+            <b>Your journey to Initech starts here...</b>
+        </h2>
+
+        <div class="box_field_personal_details">
+
+            <h3>Applicant's Details</h3>
+
+            <div class="input-box">
+                <input type = "text" name = "First Name" id = "first_name" pattern = "^[a-zA-Z]{1,20}$" required="required"/>
+                <label for="first_name">First Name</label>
+            </div>
+
+            <div class="input-box">
+                <input type = "text" name = "Last Name" id = "last_name" pattern = "^[a-zA-Z]{1,20}$" required="required"/>
+                <label for="last_name">Last Name</label>
+            </div>
+
+            <div class="input-box">
+                <input type="text" name= "Date" id="date_of_birth" maxlength="10" size="10" placeholder="dd/mm/yyyy" pattern="^\d{1,2}\/\d{1,2}\/\d{4}$" required="required"/>
+                <label for = "date_of_birth">Date of Birth</label>
+            </div>
+
+            <div class="input-box">
+                <input type = "text" name = "Job Reference Number" id = "id" pattern = "^[A-Za-z0-9]{5}$" required="required"/>
+                <label for="id">Job Reference Number</label>
+            </div>
+
+            <fieldset>
+
+                <legend>Gender</legend>
+        
+                    <label><input type="radio" name="Gender"
+                        value="Female" checked="checked" />
+                        Female
+                    </label>
+        
+                    <label><input type="radio" name="Gender"
+                        value="Male" required = "required" />
+                        Male
+                    </label>
+        
+                    <label><input type="radio" name="Gender"
+                        value="Non-Binary" />
+                        Non-Binary
+                    </label>
+        
+                    <label><input type="radio" name="Gender"
+                        value="Prefer not to Say" />
+                        Prefer not to Say
+                    </label>
+            </fieldset>
+
+        </div>
+
+
+
+
+        <div class="box_field_contacts">
+
+            <h3>Contact Information</h3>
+
+            <div class="input-box">
+                <input type = "text" name = "Street Address" id = "street_address" pattern = "^(?=.*\S)[A-Za-z0-9\s,./-]{1,40}$
+                    " required="required"/> 
+                    <label for="street_address">Street Address</label>
+            </div>
+
+            <div class="input-box">
+                <input type = "text" name = "Suburb/Town" id = "suburb" pattern = "^[a-zA-Z]{1,40}$" required="required"/>
+                <label for="suburb">Suburb/Town</label>
+            </div>
+
+            <div class="rounded_select">
+                <label for="state">State</label>
+                <select name = "Suburb" id="suburb" class = "rounded select">
+                    <option value = "Please Select">Please Select</option>
+                    <option value = "VIC">VIC</option>
+                    <option value = "NSW">NSW</option>
+                    <option value = "QLD">QLD</option>
+                    <option value = "NT">NT</option>
+                    <option value = "WA">WA</option>
+                    <option value = "SA">SA</option>
+                    <option value = "TAS">TAS</option>
+                    <option value = "ACT">ACT</option>
+                </select>  
+            </div>
+
+            <div class="input-box">
+                <input type="text" name= "Postcode" id="post_code" pattern="^\d{4}$" required="required"/>
+                <label for = "post_code">Postcode</label>
+            </div>
+
+            <div class="input-box">
+                <input type = "text" name = "Email Address" id = "email" pattern = "/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required="required"/>
+                <label for="email">Email Address</label>
+            </div>
+
+            <div class="input-box">
+                <input type="text" name= "Phone Number" id="phone_number" pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$" required="required"/>
+                <label for = "phone_number">Phone Number</label>
+            </div>      
+            
+
+
+        </div>
+
+    
+    
+
+
+        <div class="box_field_skillset" id = "skillset">
+
+            <h3>Skills</h3>
+
+            <div class="input-skills">
+                <label>
+                <input type="checkbox" name="Skills[]"
+                value="Bachelor's degree" checked = "checked" />
+
+                Bachelor's degree in Computer Science or a related STEM discipline
+                </label>
+                
+            </div>
+
+            <div class="input-skills">
+                <label> 
+                    <input type="checkbox" name="Skills[]"
+            value="Solid fundamentals" />
+
+            Solid computer science fundamentals 
+            </label>
+                
+            </div>
+
+            <div class="input-skills">
+                <label><input type="checkbox" name="Skills[]"
+                    value="6+ years of exp" />6+ years of professional software engineering experience
+                </label>
+                
+            </div>
+
+            <div class="input-skills">
+                <label><input type="checkbox" name="Skills[]"
+                    value="Expert level: Java, C++, Python" />Expert level programming skills in at least one of the following: Java, C++, Python
+                </label>
+                
+            </div>
+
+            <div class="input-skills">
+                <label><input type="checkbox" name="Skills[]"
+                    value="Proven track record" />Proven track record in software design and development
+                </label>
+                
+            </div>
+
+            <div class="input-skills">
+                <label><input type="checkbox" name="Skills[]"
+                    value="analysis / problem solving skills" />Excellent analysis / problem solving skills
+                </label>
+                
+            </div>
+
+            <div class="input-skills">
+                <label><input type="checkbox" name="Skills[]"
+                value="Multitask" />Ability to manage multiple tasks in a demanding and dynamic environment
+            </label>
+                
+            </div>
+
+            <p></p>
+            <p>(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧*:･ﾟ✧*:･ﾟ✧*:･ﾟ✧*:･ﾟ✧*:･ﾟ✧*:･ﾟ✧*:･ﾟ✧*:･ﾟ✧*:･ﾟ✧*:･ﾟ✧*:･ﾟ✧*:･ﾟ✧*:･ﾟ✧*:･ﾟ✧*:･ﾟ</p>
+            <p></p>
+
+            <div class="input-skills">
+                <label><input type="checkbox" name="Skills[]"
+                    value="Excellent communicator" />An excellent communicator, and love teaching technical concepts and creating high quality documentation that helps out others.
+                </label>
+                
+            </div>
+
+            <div class="input-skills">
+                <label><input type="checkbox" name="Skills[]"
+                    value="LLM familiarity" />High level familiarity with the architecture and operation of large language models. 
+                </label>
+                
+            </div>
+
+            <div class="input-skills">
+                <label><input type="checkbox" name="Skills[]"
+                    value="Creative hacker spirit" />A creative hacker spirit and love solving puzzles.
+                </label>
+                
+            </div>
+
+            <div class="input-skills">
+                <label><input type="checkbox" name="Skills[]"
+                    value="Holistic translator in LLM language" />Make ambiguous problems clear and identify core principles that can translate across scenarios.
+                </label>
+                
+            </div>
+
+            <div class="input-skills">
+                <label for = "other_skills"><input type="checkbox" name="Skills[]"
+                    value="Other Skills: "/>Other Skills:                
+                </label>
+                <input type="text" name= "Skills[]" id="other_skills" pattern="^.+$"/>
+                
+            </div>
+
+
+        </div>
+
+
+        <div class="container">
+            <input type="submit" value="Apply" class = "btn"/>
+
+        </div>
+          
+        
+            
+
+    </form>
+    
+    
+    
+        <footer>
+            <p>&copy; Initech Pvt.Ltd</p>
+            <p>Mark up by: <a href="mailto:104483582@student.swin.edu.au">Romy Lee Pham</a></p>
+        </footer>
+
+</body>
+
+</html>
+

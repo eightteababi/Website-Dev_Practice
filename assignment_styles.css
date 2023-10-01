@@ -1,0 +1,324 @@
+
+
+
+/*Body elements settings*/
+
+/*importing fonts*/
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Frank+Ruhl+Libre:wght@300&family=Satisfy&display=swap');
+
+body{
+  min-width: 600px;
+  overflow: auto;
+  background: url("https://i.imgur.com/DUzDprP.jpg");
+  height: 100vh;
+  font-family: 'Frank Ruhl Libre', serif;
+	font-size: 15px;
+	line-height: 1.7;
+  color: #c4c3ca;
+	background-color: #1f2029;
+}
+
+
+h2{
+  color: #fff;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 80px;
+  letter-spacing: 12px;
+  text-align: center;
+  line-height: 0.9;
+  
+}
+
+h2 b{
+  width: 4px;
+  font-family: arial;
+  font-size: 20px;
+}
+
+.box_field_personal_details h3, .box_field_contacts h3, .box_field_skillset h3 {
+
+  margin: 0 0 30px;
+  font-size: 28px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+
+}
+
+/*Settings for input box field*/
+.box_field_personal_details {
+  position: absolute;
+  top: 677px;
+  left: 50%;
+  width: 700px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(65, 56, 99, 0.6);
+  border-radius: 10px;
+}
+
+.box_field_contacts {
+
+  position: absolute;
+  top: 1380px;
+  left: 50%;
+  width: 700px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(65, 56, 99, 0.6);
+  border-radius: 10px;
+
+}
+
+.box_field_skillset {
+
+  position: absolute;
+  top: 2217px;
+  left: 50%;
+  width: 700px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(65, 56, 99, 0.6);
+  border-radius: 10px;
+
+}
+
+.box_field_skillset .input-skills input {
+
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+
+}
+
+.box_field_personal_details .input-box, .box_field_contacts .input-box, .box_field_skillset .input-box {
+  position: relative;
+}
+
+.box_field_personal_details .input-box input, fieldset, .rounded_select {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.box_field_contacts .input-box input, fieldset {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+
+.box_field_personal_details .input-box label, .box_field_contacts .input-box label {
+  position: absolute;
+  top:0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.box_field_personal_details .input-box input:focus ~ label,
+.box_field_personal_details .input-box input:valid ~ label, 
+.box_field_contacts .input-box input:focus ~ label, 
+.box_field_contacts .input-box input:focus ~ label {
+  top: -20px;
+  left: 0;
+  color: #78c7dd;
+  font-size: 12px;
+}
+
+
+/*Settings for animation background (dear God!)*/
+
+.wrapper span{
+  position: absolute;
+  top:50%;
+  left:50%;
+  width: 4px;
+  height: 4px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(255,255,255,0.1),0 0 0 8px rgba(255,255,255,0.1),0 0 20px rgba(255,255,255,0.1);
+  animation: animate 3s linear infinite;
+}
+
+.wrapper span::before{
+  content:'';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 300px;
+  height: 1px;
+  background: linear-gradient(90deg,#fff,transparent);
+}
+
+@keyframes animate
+{
+  0%
+  {
+      transform: rotate(315deg) translateX(0);
+      opacity: 1;
+  }
+  70%
+  {
+      opacity: 1;
+  }
+  100%
+  {
+      transform: rotate(315deg) translateX(-1000px);
+      opacity: 0;
+  }
+}
+
+.wrapper span:nth-child(1){
+  top: 0;
+  right: 0;
+  left: initial;
+  animation-delay: 0s;
+  animation-duration: 1s;
+}
+
+.wrapper span:nth-child(2){
+  top: 0;
+  right: 80px;
+  left: initial;
+  animation-delay: 0.2s;
+  animation-duration: 3s;
+}
+.wrapper span:nth-child(3){
+  top: 80;
+  right: 0px;
+  left: initial;
+  animation-delay: 0.4s;
+  animation-duration: 2s;
+}
+.wrapper span:nth-child(4){
+  top: 0;
+  right: 180px;
+  left: initial;
+  animation-delay: 0.6s;
+  animation-duration: 1.5s;
+}
+.wrapper span:nth-child(5){
+  top: 0;
+  right: 400px;
+  left: initial;
+  animation-delay: 0.8s;
+  animation-duration: 2.5s;
+}
+.wrapper span:nth-child(6){
+  top: 0;
+  right: 600px;
+  left: initial;
+  animation-delay: 1s;
+  animation-duration: 3s;
+}
+.wrapper span:nth-child(7){
+  top: 300px;
+  right: 0px;
+  left: initial;
+  animation-delay: 1.2s;
+  animation-duration: 1.75s;
+}
+.wrapper span:nth-child(8){
+  top: 0px;
+  right: 700px;
+  left: initial;
+  animation-delay: 1.4s;
+  animation-duration: 1.25s;
+}
+.wrapper span:nth-child(9){
+  top: 0px;
+  right: 1000px;
+  left: initial;
+  animation-delay: 0.75s;
+  animation-duration: 2.25s;
+}
+.wrapper span:nth-child(9){
+  top: 0px;
+  right: 450px;
+  left: initial;
+  animation-delay: 2.75s;
+  animation-duration: 2.75s;
+}
+
+
+
+/*Settings for the button*/
+.container {
+  position: absolute;
+  top: 2770px;
+  left: 51%;
+  width: 700px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  
+  }
+
+
+.btn {
+  border-radius: 4px;
+  height: 44px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 200ms linear;
+  padding: 0 30px;
+  letter-spacing: 1px;
+  border: none;
+  background-color: #ffeba7;
+  color: #102770;
+  box-shadow: 0 8px 24px 0 rgba(255, 235, 167, 0.2);
+}
+
+
+  .btn:active,
+  .btn:focus{  
+    background-color: #102770;
+    color: #ffeba7;
+    box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
+  }
+  .btn:hover{  
+    background-color: #102770;
+    color: #ffeba7;
+    box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
+  }
+
+
+
+  footer {
+
+    position: absolute;
+    top: 3000px;
+    left: 50%;
+    width: 1500px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+  }
